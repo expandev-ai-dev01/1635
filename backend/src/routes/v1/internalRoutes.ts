@@ -1,4 +1,5 @@
 import { Router } from 'express';
+import taskRoutes from './taskRoutes';
 
 const router = Router();
 
@@ -11,7 +12,6 @@ router.get('/', (_req, res) => {
 
 // MARK: - Feature Routes Placeholder
 // Add new internal feature routes here
-// Example: import taskRoutes from './taskRoutes';
-// router.use('/tasks', taskRoutes);
+router.use('/task', taskRoutes);
 
 export default router;

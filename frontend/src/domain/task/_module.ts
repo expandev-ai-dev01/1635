@@ -5,10 +5,17 @@
  * @version 1.0.0
  */
 
-// This file will export all public elements of the task domain.
+export * from './types';
+export * from './services';
+export * from './hooks';
+export * from './components';
 
 export const moduleMetadata = {
   name: 'task',
   domain: 'functional',
   version: '1.0.0',
+  publicComponents: ['TaskForm'],
+  publicHooks: ['useCreateTask'],
+  publicServices: ['taskService'],
+  publicTypes: ['Task', 'TaskPriority', 'TaskStatus', 'TaskCreatePayload'],
 } as const;
